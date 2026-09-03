@@ -3,6 +3,7 @@ package com.example.proyectodetarjetasparaaaprenderandroid
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performTextInput
+import com.example.proyectodetarjetasparaaaprenderandroid.TipCal.TipTimeLayout
 import com.example.proyectodetarjetasparaaaprenderandroid.ui.theme.ProyectoDeTarjetasParaaAprenderAndroidTheme
 import org.junit.Rule
 import org.junit.Test
