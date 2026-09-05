@@ -55,7 +55,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.proyectodetarjetasparaaaprenderandroid.ui.theme.ProyectoDeTarjetasParaaAprenderAndroidTheme
+import com.example.proyectodetarjetasparaaaprenderandroid.ui.theme.UnscrambleTheme
 import java.text.NumberFormat
 import kotlin.math.ceil
 
@@ -64,21 +64,12 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ProyectoDeTarjetasParaaAprenderAndroidTheme {
+            UnscrambleTheme {
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background) {
-
+                    GameScreen()
                 }
             }
         }
-    }
-}
-
-
-@Preview(showBackground = true, name = "Cualquier nombre")
-@Composable
-fun LemonadeApp() {
-    ProyectoDeTarjetasParaaAprenderAndroidTheme {
-
     }
 }
