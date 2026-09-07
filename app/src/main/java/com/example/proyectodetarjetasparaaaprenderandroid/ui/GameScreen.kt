@@ -1,5 +1,6 @@
-package com.example.proyectodetarjetasparaaaprenderandroid
+package com.example.proyectodetarjetasparaaaprenderandroid.ui
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -40,7 +41,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.proyectodetarjetasparaaaprenderandroid.ui.GameViewModel
+import com.example.proyectodetarjetasparaaaprenderandroid.R
 import com.example.proyectodetarjetasparaaaprenderandroid.ui.theme.UnscrambleTheme
 
 @Composable
@@ -201,6 +202,7 @@ fun GameLayout(
 /*
  * Creates and shows an AlertDialog with final score.
  */
+@SuppressLint("ContextCastToActivity")
 @Composable
 private fun FinalScoreDialog(
     score: Int,
