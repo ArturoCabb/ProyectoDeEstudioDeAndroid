@@ -78,6 +78,7 @@ fun ReplyListAndDetailContent(
     modifier: Modifier = Modifier
 ) {
     val emails = replyUiState.currentMailboxEmails
+    val activity = LocalContext.current as Activity
     Row(
         modifier = modifier,
         horizontalArrangement = Arrangement.SpaceEvenly
@@ -107,7 +108,7 @@ fun ReplyListAndDetailContent(
             modifier = Modifier
                 .padding(top = dimensionResource(R.dimen.email_list_item_vertical_spacing))
                 .weight(1f),
-            onBackPressed = {}
+            onBackPressed = { activity.finish() }
         )
     }
 }
