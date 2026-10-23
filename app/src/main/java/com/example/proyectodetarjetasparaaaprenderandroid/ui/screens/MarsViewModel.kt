@@ -4,9 +4,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.proyectodetarjetasparaaaprenderandroid.MarsPhotosApplication
 import com.example.proyectodetarjetasparaaaprenderandroid.data.MarsPhotosRepository
-import com.example.proyectodetarjetasparaaaprenderandroid.data.NetworkMarsPhotosRepository
 import kotlinx.coroutines.launch
 import okio.IOException
 import retrofit2.HttpException
@@ -42,6 +46,18 @@ class MarsViewModel(private val marsPhotosRepository: MarsPhotosRepository) : Vi
                 MarsUiState.Error
             } catch (e: HttpException) {
                 MarsUiState.Error
+            }
+        }
+    }
+
+    companion object {
+        val Factory: ViewModelProvider.Factory = viewModelFactory {
+            initializer {
+                val application =
+                    (this[APPLICATION_KEY] as MarsPhotosApplication)
+                val marsPhotosRepository =
+                    application.container.marsPhotosRepository
+                MarsViewModel(marsPhotosRepository = marsPhotosRepository)
             }
         }
     }
