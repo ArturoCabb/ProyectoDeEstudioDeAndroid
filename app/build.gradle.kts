@@ -62,4 +62,7 @@ dependencies {
     //implementation(libs.converter.scalars)
     implementation(libs.retrofit2.kotlinx.serialization.converter)
     implementation(libs.okhttp)
+
+    // Coil
+    implementation(libs.coil.compose)
 }
