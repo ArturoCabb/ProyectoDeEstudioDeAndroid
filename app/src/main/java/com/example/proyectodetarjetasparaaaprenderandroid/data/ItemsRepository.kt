@@ -1,0 +1,3 @@
+package com.example.proyectodetarjetasparaaaprenderandroid.data
+
+interface ItemsRepository
