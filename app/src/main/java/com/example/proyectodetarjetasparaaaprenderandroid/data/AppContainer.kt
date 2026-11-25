@@ -19,5 +19,5 @@ package com.example.proyectodetarjetasparaaaprenderandroid.data
  * App container for Dependency injection.
  */
 interface AppContainer {
-    val trackerRepository: JuiceRepository
+    val juiceRepository: JuiceRepository
 }

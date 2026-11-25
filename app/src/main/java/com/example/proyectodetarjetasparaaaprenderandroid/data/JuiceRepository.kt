@@ -18,8 +18,7 @@ package com.example.proyectodetarjetasparaaaprenderandroid.data
 import kotlinx.coroutines.flow.Flow
 
 interface JuiceRepository {
-    val juicesStream: Flow<List<Juice>>
-
+    val juiceStream: Flow<List<Juice>>
     fun getJuiceStream(id: Long): Flow<Juice?>
     suspend fun addJuice(juice: Juice)
     suspend fun deleteJuice(juice: Juice)

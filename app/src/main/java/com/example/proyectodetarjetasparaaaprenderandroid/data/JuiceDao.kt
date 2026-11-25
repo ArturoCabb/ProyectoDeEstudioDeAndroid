@@ -28,7 +28,7 @@ interface JuiceDao {
     fun getAll(): Flow<List<Juice>>
 
     @Query("SELECT * FROM juice WHERE id = :id")
-    fun get(id: Long): Flow<Juice>
+    fun getItem(id: Long): Flow<Juice?>
 
     @Insert
     suspend fun insert(juice: Juice)

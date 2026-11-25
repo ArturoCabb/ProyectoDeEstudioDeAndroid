@@ -15,11 +15,12 @@
  */
 package com.example.proyectodetarjetasparaaaprenderandroid.data
 
-import android.graphics.Color
 import androidx.annotation.StringRes
+import androidx.compose.ui.graphics.Color
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.proyectodetarjetasparaaaprenderandroid.R
+import com.example.proyectodetarjetasparaaaprenderandroid.ui.theme.Orange as JuiceOrange
 
 @Entity
 data class Juice(
@@ -31,11 +32,12 @@ data class Juice(
     val rating: Int
 )
 
-enum class JuiceColor(val color: Int, @StringRes val label: Int) {
-    Red(Color.RED, R.string.red),
-    Blue(Color.BLUE, R.string.blue),
-    Green(Color.GREEN, R.string.green),
-    Cyan(Color.CYAN, R.string.cyan),
-    Yellow(Color.YELLOW, R.string.yellow),
-    Magenta(Color.MAGENTA, R.string.magenta)
+enum class JuiceColor(val color: Color, @StringRes val label: Int) {
+    Red(Color.Red, R.string.red),
+    Blue(Color.Blue, R.string.blue),
+    Green(Color.Green, R.string.green),
+    Cyan(Color.Cyan, R.string.cyan),
+    Yellow(Color.Yellow, R.string.yellow),
+    Magenta(Color.Magenta, R.string.magenta),
+    Orange(JuiceOrange, R.string.orange)
 }

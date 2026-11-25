@@ -24,19 +24,18 @@ import com.example.proyectodetarjetasparaaaprenderandroid.JuiceTrackerApplicatio
 
 object AppViewModelProvider {
     val Factory = viewModelFactory {
+        // Initializer for JuiceTrackerViewModel
+        initializer {
+            JuiceTrackerViewModel(juiceTrackerApplication().container.juiceRepository)
+        }
         // Initializer for EntryViewModel
         initializer {
-            EntryViewModel(juiceTrackerApplication().container.trackerRepository)
-        }
-        // Initializer for TrackerViewModel
-        initializer {
-            TrackerViewModel(juiceTrackerApplication().container.trackerRepository)
+            EntryViewModel(juiceTrackerApplication().container.juiceRepository)
         }
     }
 }
-
 /**
- * Extension function to query for [Application] object and returns an instance of
+ * Extension function to queries for [Application] object and returns an instance of
  * [JuiceTrackerApplication].
  */
 fun CreationExtras.juiceTrackerApplication(): JuiceTrackerApplication =
